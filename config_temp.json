@@ -1,0 +1,34 @@
+{
+    "chains": {
+        "matic": {
+            "nft_id_url": "https://polygonscan.com/token/generic-tokenholder-inventory?m=normal&contractAddress=[contract]&a=[wallet]&pUrl=token",
+            "nft_detail_url": "https://api.opensea.io/api/v2/metadata/matic/[contract]/[id]"
+        },
+        "rinkeby": {
+            "nft_id_url": "https://rinkeby.etherscan.io/token/generic-tokenholder-inventory?m=normal&contractAddress=[contract]&a=[wallet]&pUrl=token",
+            "nft_detail_url": "https://testnets-api.opensea.io/api/v2/metadata/rinkeby/[contract]/[id]"
+        }
+    },
+    "log": {
+          "path_file": null,
+          "format": "%(asctime)s|%(levelname)s|%(filename)s:%(lineno)s|%(message)s"
+    },
+    "endpoint": {
+        "ipfs_server": "/ip4/127.0.0.1/tcp/5001",
+        "work_pixil": "./WorkPixil/",
+        "work_pixil_gen": "./WorkPixil/gen/"
+    },
+    "template_metadata": {
+        "animation_url": null,
+        "external_link": null,
+        "image": "https://ipfs.io/ipfs/{path_img}",
+        "traits": [],
+        "custom_data": {}
+    },
+    "pinata": {
+        "api_key": "key",
+        "secret": "secret"
+    },
+    "proxylist": ["169.57.1.85:8123","52.88.87.164:80","89.250.187.46:8118","103.73.194.2:80"],
+    "proxy_req": 0
+}
