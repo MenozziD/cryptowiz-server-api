@@ -22,6 +22,7 @@ def make_request(url, body=None, pinata=None):
             files=pinata
         ).prepare()
         response = requests.Session().send(request)
+        info(response.request.body)
         to_return['response'] = response.json()
         info("RESPONSE: %s", to_return['response'])
         to_return['state'] = True
@@ -94,7 +95,12 @@ def be_generate_nft(source_file, template_file, destination, name, description):
             "display_type": None,
             "value": i['value_type'].title()
         })
-    metadata["traits"] = traits
+    metadata["attributes"] = traits
+    '''
+    metadata["custom_data"] = {}
+    metadata.pop('custom_data', None)
+    metadata.pop('traits', None)
+    '''
     return metadata
 
 

@@ -17,7 +17,7 @@ CORS(app)
 @cross_origin()
 def nft_up():
     to_ret = {}
-    make_collection(Config.settings['endpoint']['work_pixil_gen'], 'test_final', 10, "base.json")
+    make_collection(Config.settings['endpoint']['work_pixil_gen'], 'c_itm_070522', 5, "items.json")
     to_ret['state'] = True
     info(f"RESPONSE: {to_ret}")
     return to_ret
